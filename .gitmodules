@@ -1,0 +1,3 @@
+[submodule "lespectrobot"]
+	path = lespectrobot
+	url = https://github.com/ton-nom/lespectrobot.git

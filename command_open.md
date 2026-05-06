@@ -2,6 +2,11 @@
 
 LeRobot provides a utility script to setup and test CAN interfaces:
 
+#### Camera
+```bash 
+lerobot-find-cameras opencv 
+```
+
 #### Setup multiple interfaces (e.g., OpenArms Followers with 2 CAN buses)
 ```bash
 lerobot-setup-can --mode=setup --interfaces=can0,can1

@@ -26,7 +26,10 @@ lerobot-setup-can --mode=setup --interfaces=can0,can1
 ```bash
 lerobot-setup-can --mode=test --interfaces=can0,can1
 ```
-
+# Run speed/latency test
+```bash
+lerobot-setup-can --mode=speed --interfaces=can0
+```
 
 ### Teleoperation and Data Collection
 Follower Arm (Robot)

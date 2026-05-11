@@ -3,7 +3,7 @@ ShakeItUp is a project involving a bimanual robot (OpenArm by Enactic) that shak
 This project was presented at the Unaite Robotics Hackathon during the GOSIM Paris 2026 conference.
 
 <p align="center">
-  <img src="gif/demo.gif" width="700"/>
+  <img src="gif/demo.gif" width="400"/>
   <br>Teleoperation during GOSIM Paris 2026</em>
 </p>
 

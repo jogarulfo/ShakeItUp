@@ -1,14 +1,19 @@
 # ShakeItUp (Hackathon at GOSIM Paris 2026)
-ShakeItUp is project involving a bimanual robot (OpenArm by Enactic) that shakes an opaque bottle, guess its content, and open it only when needed.
-This was presented for the Unaite Robotics Hackathon in the conference GOSIM Paris 2026.
+ShakeItUp is a project involving a bimanual robot (OpenArm by Enactic) that shakes an opaque bottle, guesses its content, and opens it only when needed.
+This project was presented at the Unaite Robotics Hackathon during the GOSIM Paris 2026 conference.
 
-The trick is to measure the gripper dynamic deformation (strain) and to use this strain data to guess the content of an opaque bottle. 
-To this end, the hackathon experiments have been made with a piezo strain sensor (Dragonfly by Wormsensing, ref. DGF-UNI-W220405-10) glued to the left jaw of the left arm of OpenArm, and an IEPE acquisition system (IOLITE-X by Dewesoft, ref. IOLITE-X-8xACC). 
+The idea is to measure the dynamic deformation (strain) of the gripper and use this strain data to infer the content of an opaque bottle.
 
-The strain data was streamed through the open-source openDAQ library (https://docs.opendaq.com/manual/opendaq/3.30/introduction.html) towards the open-source Hugging Face LeRobot library (https://github.com/huggingface/lerobot). You can update the pipeline to match your own acquisition setup.
+To achieve this, the hackathon experiments were performed using:
+- a piezo strain sensor (Dragonfly by Wormsensing, ref. DGF-UNI-W220405-10) glued to the left jaw of the left OpenArm gripper
+- an IEPE acquisition system (Dewesoft, ref. IOLITE-X-8xACC)
 
-The code for data acquisition is in the submodule `lespectrobot/src/lerobot/robots`. 
-The code is currently working with robots SO-101 and OpenArm (for the bi-OpenArm, just replace any of the two OpenArm by an `OpenFollowerDragonTactile` arm in the file `bi_openarm_follower.py`).
+The strain data was streamed through the open-source openDAQ library (https://docs.opendaq.com/manual/opendaq/3.30/introduction.html) into the open-source Hugging Face LeRobot library (https://github.com/huggingface/lerobot).
+You can adapt the pipeline to match your own acquisition setup.
+
+The code for data acquisition is located in the submodule `lespectrobot/src/lerobot/robots`.
+The code currently supports the SO-101 and OpenArm robots. 
+For a bimanual OpenArm setup, simply replace one of the two OpenArm instances with an `OpenFollowerDragonTactile` arm in the file `bi_openarm_follower.py`.
 
 
 ## Installation
@@ -32,7 +37,8 @@ You would use "feetech" instead of "damiao" if you use SO-100 or SO-101 instead 
 
 ## Guide
 
-The following is a step-by-step guide of the commands used during the hackaton to teleoperate, record and train OpenArm with a OpenArm_mini (https://github.com/pkooij/open-arms-mini) as the leader.
+The following is a step-by-step guide to the commands used during the hackathon to teleoperate, record, and train OpenArm using an OpenArm Mini (https://github.com/pkooij/open-arms-mini) as the leader arm.
+
 
 ### Environment setup for OpenArm
 

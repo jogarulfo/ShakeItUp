@@ -32,6 +32,7 @@ git clone --recursive https://github.com/jogarulfo/ShakeItUp.git
 Install dependencies
 
 ```bash
+uv venv
 uv pip install -e .
 cd lespectrobot
 uv pip install -e .[damiao] 
@@ -43,19 +44,6 @@ You would use "feetech" instead of "damiao" if you use SO-100 or SO-101 instead 
 ## Guide
 
 The following is a step-by-step guide to the commands used during the hackathon to teleoperate, record, and train OpenArm using an OpenArm Mini (https://github.com/pkooij/open-arms-mini) as the leader arm.
-
-
-### Environment setup for OpenArm
-
-```bash
-conda create -n ShakeItUp_env python=3.12 -y
-conda activate ShakeItUp_env
-conda install -c conda-forge numpy matplotlib scipy polars pyarrow -y
-pip install opencv-python opendaq
-cd ShakeItUp
-pip install -e ".[damiao]"
-pip install rerun-sdk
-```
 
 <!-- ### Cameras
 ```bash 
